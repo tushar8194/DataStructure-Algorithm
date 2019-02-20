@@ -15,7 +15,7 @@ public class arrayDefine {
 
         int[] myIntArray1 = new int[3];
         int[] myIntArray2 = {1,2,3};
-        int[] myIntArray3 = new int[]{1,2,3};
+        int myIntArray3[] = new int[]{1,2,3};
 
 
         String[] myStringArray1 = new String[3];
