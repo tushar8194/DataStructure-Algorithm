@@ -6,20 +6,21 @@ public class CircularQueueUsingArray {
 
     int size=5;
     Character[] arr = new Character[size];
-    int rear = -1;
-    int front= -1;
+    int rear = 0;
+    int front= 0;
 
 
     public void enqueue(Character data){
-        rear = (rear + 1) % size;
-        front = (front+1) % size;
+        //front = (front+1) % size;
         arr[rear] = data;
+        rear = (rear + 1) % size;
     }
 
     public Character dequeue(){
-        rear = (rear + 1) % size;
+        //rear = (rear + 1) % size;
+        char data = arr[front];
         front = (front+1) % size;
-        return arr[front];
+        return data;
     }
 
 
@@ -30,10 +31,13 @@ public class CircularQueueUsingArray {
         obj.enqueue('A');
         obj.enqueue('B');
         obj.enqueue('C');
+
+        System.out.println(obj.dequeue());
+
         obj.enqueue('D');
         obj.enqueue('E');
-
         obj.enqueue('F');
+
         obj.enqueue('G');
         obj.enqueue('H');
         obj.enqueue('I');
