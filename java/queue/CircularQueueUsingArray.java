@@ -25,7 +25,9 @@ public class CircularQueueUsingArray {
     }
 
     public Character dequeue(){
-        char data = arr[front];
+        char data = ' ';
+        data = arr[front];
+        arr[front] = ' ';
         front = (front+1) % maxSize;
         System.out.println(" front -> " + front + " rear -> "+ rear +"    removed " + data);
         currentSize--;
@@ -59,6 +61,9 @@ public class CircularQueueUsingArray {
         obj.dequeue();
         System.out.println(Arrays.toString(obj.arr));
         obj.dequeue();
+        System.out.println(Arrays.toString(obj.arr));
+
+        obj.enqueue('H');
         System.out.println(Arrays.toString(obj.arr));
 
     }
