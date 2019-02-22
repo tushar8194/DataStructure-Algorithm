@@ -7,6 +7,11 @@ public class HRStackMaximumElement {
 
     /* Problem : https://www.hackerrank.com/challenges/maximum-element/problem */
 
+    /*Solution : Take Two stacks st and stMax.
+    *            first element insert in both
+    *            second element if its greater then stMax.peek() -> insert in both
+    *                            else insert in st only.  */
+
 
     public static void main(String[] args) {
 
@@ -26,9 +31,11 @@ public class HRStackMaximumElement {
                     int data = sc.nextInt();
                     if(stmax.isEmpty()){
                         stmax.push(data);
+                        st.push(data);
                     }else{
-                        if(stmax.peek() < data){
+                        if(stmax.peek() <= data){
                             stmax.push(data);
+                             st.push(data);
                         }else {
                             st.push(data);
                         }
