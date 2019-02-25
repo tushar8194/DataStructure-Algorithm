@@ -2,7 +2,7 @@ package hackerrank;
 
 import java.util.Stack;
 
-public class HRBalancedString {
+public class HRStackBalancedString {
 
     /*Problem : https://www.hackerrank.com/challenges/balanced-brackets/problem */
 
