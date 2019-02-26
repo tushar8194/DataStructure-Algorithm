@@ -1,12 +1,7 @@
 package hackerrank;
 
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
+
 
 public class HRStackLargestRectangle {
 
@@ -32,31 +27,46 @@ public class HRStackLargestRectangle {
 
     static long largestRectangle(int[] h) {
 
-        int i=0;
+        if(h == null || h.length == 0){
+            return 0;
+        }
+
+        int i = 0;
         long maxArea = 0;
         long area = 0;
 
         Stack<Integer> st = new Stack<>();
 
-        while(i<h.length){
+        while (i < h.length) {
 
-            if(st.isEmpty() || st.peek() < h[i]){
+            if (st.isEmpty() || h[st.peek()] < h[i]) {
                 st.push(i);
-            }else {
-
-
-                area = h[st.pop()]*(i-st.pop()-1);
-
-                if(area > maxArea){
+                i++;
+            } else {
+                int top = st.pop();
+                if (st.isEmpty()) {
+                    area = h[top] * i;
+                } else {
+                    area = h[top] * (i - st.peek() - 1);
+                }
+                if (area > maxArea) {
                     maxArea = area;
                 }
             }
-            i++;
-
         }
 
-        return maxArea;
 
+        while (!st.isEmpty()) {
+            int top = st.pop();
+            if (st.isEmpty()) {
+                area = h[top] * i;
+            } else {
+                area = h[top] * (i - st.peek() - 1);
+            }
+            if (area > maxArea) {
+                maxArea = area;
+            }
+        }
+            return maxArea;
     }
-
 }
