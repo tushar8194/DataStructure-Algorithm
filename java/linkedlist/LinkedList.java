@@ -29,35 +29,38 @@ public class LinkedList {
     }
 
     public void insertAtLast(String data){
+        Node addNode = new Node(data);
          Node current = head;
          while (current.next!=null){
              current = current.next;
          }
-         current.next.data = data;
+         current.next = addNode;
 
     }
 
 
     public void deleteFromLast(){
-
+        if(head != null){
+            Node current = head;
+            Node prev = head;
+            while (current.next != null){
+                prev = current;
+                current = current.next;
+            }
+            prev.next = null;
+        }
     }
 
-    public void deleteNode(String data){
-        if(null == head){
-            head = new Node(data);
-        }else {
 
-        }
-
-        Node current = null;
-        Node prv = null;
-        while (current.data!=data){
+    public void deleteNode(String data) {
+        if (null != head) {
+        Node current = head;
+        Node prv = head;
+        while (current.data != data) {
             prv = current;
             current = current.next;
         }
         prv.next = current.next;
+      }
     }
-
-
-
 }
