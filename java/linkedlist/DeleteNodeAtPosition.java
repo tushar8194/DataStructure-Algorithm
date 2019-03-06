@@ -2,20 +2,25 @@ package linkedlist;
 
 public class DeleteNodeAtPosition {
 
-    public static void deleteNodeAtPosition(Node head, int position){
+    public static Node deleteNodeAtPosition(Node head, int position){
         Node current = head;
-        Node prev = head;
+        Node prev = null;
         int i=0;
 
 
-        if(head != null){
-            while (i<position){
+        if(i == position && head.next != null){
+            head = head.next;
+        } else if(i == position && head.next == null){
+            head = null;
+        } else{
+            while (current != null && i < position ){
                 prev = current;
                 current = current.next;
                 i++;
             }
             prev.next = current.next;
         }
+        return head;
 
     }
 
@@ -23,18 +28,13 @@ public class DeleteNodeAtPosition {
     public static void main(String[] args) {
 
         LinkedList list = new LinkedList();
-        list.addElementAtBegining("H");
-        list.addElementAtBegining("G");
-        list.addElementAtBegining("F");
-        list.addElementAtBegining("E");
-        list.addElementAtBegining("D");
-        list.addElementAtBegining("C");
+
         list.addElementAtBegining("B");
         list.addElementAtBegining("A");
         list.printList();
         System.out.println("------------------------------");
 
-        deleteNodeAtPosition(list.head,3);
+        list.head = deleteNodeAtPosition(list.head,0);
         list.printList();
 
     }
