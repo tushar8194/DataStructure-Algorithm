@@ -24,7 +24,6 @@ public class CompareTwoLinkedList {
         list2.addElementAtBegining("B");
         list2.addElementAtBegining("A");
 
-
         System.out.println(compareLists(list1.head, list2.head));
 
     }

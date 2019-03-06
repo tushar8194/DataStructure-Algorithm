@@ -1,8 +1,9 @@
 package hackerrank;
 
-public class HRLinkedListPrintInReverse {
+public class HRLinkedListReverseAList {
 
     public static void main(String[] args) {
+
 
         LinkedList list1 = new LinkedList();
         list1.addElementAtBegining("H");
@@ -17,19 +18,26 @@ public class HRLinkedListPrintInReverse {
         list1.printList();
 
         System.out.println("--------------------------");
-        reversePrint(list1.head);
+
+        reverse(list1.head);
+
+        list1.printList();
 
     }
 
-    static void reversePrint(Node head) {
+
+    public static void reverse(Node head){
         Node current = head;
+        Node prev = null;
+        Node next = null;
 
-        if(current ==  null)
-            return;
+        while(current != null){
+            next = current.next;
+            current.next = prev;
+            prev = current ;
+            current = next;
+        }
 
-        reversePrint(head.next);
-
-        System.out.println(head.data);
     }
 
 
