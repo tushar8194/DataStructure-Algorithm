@@ -28,14 +28,21 @@ public class LinkedList {
         }
     }
 
-    public void insertAtLast(String data){
+    public Node insertAtLast(String data){
         Node addNode = new Node(data);
-         Node current = head;
-         while (current.next!=null){
-             current = current.next;
-         }
-         current.next = addNode;
+        Node current = head;
+        Node prev = null;
 
+        if (current == null) {
+            head = addNode;
+        } else {
+            while (current != null) {
+                prev = current;
+                current = current.next;
+            }
+            prev.next = addNode;
+        }
+        return addNode;
     }
 
 
