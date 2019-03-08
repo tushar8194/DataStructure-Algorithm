@@ -3,6 +3,14 @@ package hackerrank;
 public class HRLinkedListCycleDetection {
     public static void main(String[] args) {
 
+    /* Problem : First find if LinkedList is having a loop or not
+    *           IF FOUND THEN : Remove that loop
+    *  Solution : find mid point of loop.
+    *           if there a row and one guy is moving one step and second guy is moving two steps then
+    *           first guy will reach at mid and second guy will reach at end.
+    *  https://www.hackerrank.com/challenges/detect-whether-a-linked-list-contains-a-cycle/problem */
+
+
         LinkedList list = new LinkedList();
         Node A = list.insertAtLast("A");
         Node B = list.insertAtLast("B");
