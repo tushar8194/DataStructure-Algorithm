@@ -5,7 +5,7 @@ public class RemoveDuplicateNodes {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.addElementAtBegining("F");
-        list.addElementAtBegining("E");
+        list.addElementAtBegining("F");
         list.addElementAtBegining("D");
         list.addElementAtBegining("D");
         list.addElementAtBegining("D");
@@ -22,9 +22,14 @@ public class RemoveDuplicateNodes {
         Node current = head;
         while (current != null && current.next != null){
                 while (current.data == current.next.data){
-                    current.next = current.next.next;
+                    if(current.next.next != null){
+                        current.next = current.next.next;
+                    } else {
+                        current.next = null;
+                        break;
+                    }
                 }
-                current = current.next;
+        current = current.next;
         }
     }
 
