@@ -64,6 +64,7 @@ public class Tree {
              i =i + countNodesInTree(root.rightChild);
              return i;
          }
+         return 0;
      }
 
 
