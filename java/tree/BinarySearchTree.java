@@ -9,8 +9,8 @@ public class BinarySearchTree {
         while (current != null ){
 
             if(data < current.data){
-                if(current.leftCheild != null ){
-                    current = current.leftCheild ;
+                if(current.leftChild != null ){
+                    current = current.leftChild ;
                 }
             }
 
@@ -24,7 +24,7 @@ public class BinarySearchTree {
 
         while (current != null && current.data != data){
             if(current.data > data){
-                current = current.leftCheild;
+                current = current.leftChild;
             }else {
                 current = current.rightChild;
             }
@@ -44,7 +44,7 @@ public class BinarySearchTree {
             root = new TreeNode(data);
         } else {
             if(root.data < data){
-                root.setRightChild(insertRecur(data,root.leftCheild));
+                root.setRightChild(insertRecur(data,root.leftChild));
             } else {
                 root.setRightChild(insertRecur(data,root.rightChild));
             }

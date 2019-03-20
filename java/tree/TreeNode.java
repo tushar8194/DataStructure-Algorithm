@@ -1,28 +1,28 @@
 package tree;
 
 public class TreeNode {
-    TreeNode leftCheild;
+    TreeNode leftChild;
     TreeNode rightChild;
     int data;
 
-    public TreeNode(int data, TreeNode leftCheild, TreeNode rightChild){
-        this.leftCheild = leftCheild;
+    public TreeNode(int data, TreeNode leftChild, TreeNode rightChild){
+        this.leftChild = leftChild;
         this.rightChild = rightChild;
         this.data = data;
     }
 
     public TreeNode(int data){
-        this.leftCheild = leftCheild;
+        this.leftChild = leftChild;
         this.rightChild = rightChild;
         this.data = data;
     }
 
     public TreeNode getLeftCheild() {
-        return leftCheild;
+        return leftChild;
     }
 
-    public void setLeftCheild(TreeNode leftCheild) {
-        this.leftCheild = leftCheild;
+    public void setLeftChild(TreeNode leftCheild) {
+        this.leftChild = leftCheild;
     }
 
     public TreeNode getRightChild() {
