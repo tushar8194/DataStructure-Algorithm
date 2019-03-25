@@ -1,11 +1,18 @@
 package tree;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class Tree {
+    TreeNode    root;
+
+    public Tree() {
+        // TODO Auto-generated constructor stub
+        this.root= null;
+    }
 
 
-    public static void preOrderTraversal(TreeNode node) {
+    public  void preOrderTraversal(TreeNode node) {
 
         if (node != null) {
             System.out.print(node.data + " ");
@@ -14,12 +21,12 @@ public class Tree {
         }
     }
 
-    public static ArrayList preOrderTraversalWithoutRecur(TreeNode node){
+    public  ArrayList preOrderTraversalWithoutRecur(TreeNode node){
         ArrayList<Integer> list = new ArrayList<>();
         return list;
     }
 
-    public static void inOrderTraversal(TreeNode node) {
+    public  void inOrderTraversal(TreeNode node) {
         if (node != null) {
             preOrderTraversal(node.leftCheild);
             System.out.print(node.data + " ");
@@ -27,7 +34,12 @@ public class Tree {
         }
     }
 
-     public static void postOrderTraversal(TreeNode root) {
+    public  void inOrderTraversalWithoutRecur(TreeNode node) {
+        Stack<String> st=new Stack<>();
+
+    }
+
+     public  void postOrderTraversal(TreeNode root) {
          if (root != null) {
              preOrderTraversal(root.leftCheild);
              preOrderTraversal(root.rightChild);
@@ -37,7 +49,7 @@ public class Tree {
 
 
 
-     public static int countNodesInTree(TreeNode root){
+     public  int countNodesInTree(TreeNode root){
 
         if(root == null) {
             return 0;
@@ -49,13 +61,13 @@ public class Tree {
             }
      }
 
-     public static int countNodesInTreeWithoutRecur(TreeNode root){
+     public  int countNodesInTreeWithoutRecur(TreeNode root){
 
             return 0;
 
      }
 
-     public static int countLeafNodes(TreeNode root){
+     public int countNodes(TreeNode root){
          if(root == null) {
              return 0;
          }else if(root.leftCheild != null || root.rightChild !=null){
@@ -64,27 +76,48 @@ public class Tree {
              i =i + countNodesInTree(root.rightChild);
              return i;
          }
+         return 0;
+     }
+
+     public  int getLeafNodeCount(TreeNode root){
+        if(root == null){
+            return 0;
+        }
+        if(root.leftCheild == null && root.rightChild == null){
+            return 1;
+        }
+        return getLeafNodeCount(root.leftCheild) + getLeafNodeCount(root.rightChild);
      }
 
 
 
-    public static void main(String[] args) {
-        TreeNode node = new TreeNode(50);
-        node.setRightChild(new TreeNode(30));
-        node.setLeftCheild(new TreeNode(20));
-        node.leftCheild.setLeftCheild(new TreeNode(40));
-
-        System.out.println(countNodesInTree(node));
-
-        System.out.println("Pre-Order : ");
-        preOrderTraversal(node);
-
-        System.out.println("\nIn-Order : ");
-        inOrderTraversal(node);
-
-        System.out.println("\nPost-Order : ");
-        postOrderTraversal(node);
+    public  int getHalfLeafNodeCount(TreeNode root){
+        if(root == null){
+            return 0;
+        }
+        if((root.leftCheild == null && root.rightChild != null)  || (root.leftCheild != null && root.rightChild == null )){
+            return 1;
+        }
+        return (getLeafNodeCount(root.leftCheild) + getLeafNodeCount(root.rightChild));
     }
+
+    public void levelOrderTraversal(Tree root){
+
+    }
+
+    public boolean isMirror(TreeNode node1, TreeNode node2){
+        if(node1 ==null && node2 == null){
+            return true;
+        }
+        if(node1 ==null || node2 == null){
+            return false;
+        }
+        else if(node1.data == node2.data){
+            return (isMirror(node1.getLeftCheild(),node2.getRightChild()) && isMirror(node1.getRightChild(),node2.getLeftCheild()));
+        }
+        return false;
+    }
+
 
 
 }
