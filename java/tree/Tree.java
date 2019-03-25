@@ -16,7 +16,7 @@ public class Tree {
 
         if (node != null) {
             System.out.print(node.data + " ");
-            preOrderTraversal(node.leftCheild);
+            preOrderTraversal(node.leftChild);
             preOrderTraversal(node.rightChild);
         }
     }
@@ -28,7 +28,7 @@ public class Tree {
 
     public  void inOrderTraversal(TreeNode node) {
         if (node != null) {
-            preOrderTraversal(node.leftCheild);
+            preOrderTraversal(node.leftChild);
             System.out.print(node.data + " ");
             preOrderTraversal(node.rightChild);
         }
@@ -41,7 +41,7 @@ public class Tree {
 
      public  void postOrderTraversal(TreeNode root) {
          if (root != null) {
-             preOrderTraversal(root.leftCheild);
+             preOrderTraversal(root.leftChild);
              preOrderTraversal(root.rightChild);
              System.out.print(root.data + " ");
          }
@@ -55,7 +55,7 @@ public class Tree {
             return 0;
         }else {
                 int i= 1;
-                i =i + countNodesInTree(root.leftCheild);
+                i =i + countNodesInTree(root.leftChild);
                 i =i + countNodesInTree(root.rightChild);
                 return i;
             }
@@ -70,9 +70,9 @@ public class Tree {
      public int countNodes(TreeNode root){
          if(root == null) {
              return 0;
-         }else if(root.leftCheild != null || root.rightChild !=null){
+         }else if(root.leftChild != null || root.rightChild !=null){
              int i= 1;
-             i =i + countNodesInTree(root.leftCheild);
+             i =i + countNodesInTree(root.leftChild);
              i =i + countNodesInTree(root.rightChild);
              return i;
          }
@@ -89,6 +89,7 @@ public class Tree {
         return getLeafNodeCount(root.leftCheild) + getLeafNodeCount(root.rightChild);
      }
 
+<<<<<<< HEAD
 
 
     public  int getHalfLeafNodeCount(TreeNode root){
@@ -120,5 +121,7 @@ public class Tree {
 
 
 
+=======
+>>>>>>> 0c46682e291ae8d98bdcd2b806b097c0fb070eb7
 }
 

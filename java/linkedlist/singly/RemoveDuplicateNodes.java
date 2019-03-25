@@ -2,6 +2,8 @@ package linkedlist.singly;
 
 public class RemoveDuplicateNodes {
 
+    /* Given : A sorted linked list, Now remove all duplicate elements. */
+
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.addElementAtBegining("F");

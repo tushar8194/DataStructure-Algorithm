@@ -18,8 +18,9 @@ public class DetectIntersactionTwoLinkedList {
 
         G.next = C;
 
-       // L1.printList();
-       // L2.printList();
+        /*L1.printList();
+        System.out.println("______");
+        L2.printList();*/
 
         System.out.println(interscationPoint(L1.head,L2.head).data);
 

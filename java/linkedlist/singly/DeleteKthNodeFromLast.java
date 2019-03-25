@@ -32,7 +32,7 @@ public class DeleteKthNodeFromLast {
         }
 
         k = i-k;
-        i = 0;
+        i = 1;
         current = head;
 
         while (i != k ){

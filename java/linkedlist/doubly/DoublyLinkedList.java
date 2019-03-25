@@ -41,6 +41,8 @@ public class DoublyLinkedList {
             head=head.next;
         }
     }
+
+
     public void deleteFromLast(){
         if(null == head){
             System.out.println("List is Empty");
@@ -53,6 +55,18 @@ public class DoublyLinkedList {
         }
     }
 
+    public void deleteAfter(int data){
+        DoublyNode current  = head;
+        while (current.data != data){
+            current = current.next;
+        }
+        if(current.next != null && current.next.next != null){
+            current.next = current.next.next;
+        } else {
+            current.next = null;
+        }
+    }
+
 
     public void printForward(){
         DoublyNode currentNode= head;
@@ -61,14 +75,18 @@ public class DoublyLinkedList {
             currentNode=currentNode.next;
         }
     }
+
+
     public void printBackword(){
         DoublyNode currentNode= head;
         while(null!=currentNode.next){
             currentNode=currentNode.next;
         }
-        while(null!=currentNode){
+        while(head !=currentNode){
             System.out.println(currentNode.data);
             currentNode=currentNode.prev;
         }
+        System.out.println(currentNode.data);
     }
+
 }
