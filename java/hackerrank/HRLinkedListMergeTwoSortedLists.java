@@ -10,11 +10,14 @@ public class HRLinkedListMergeTwoSortedLists {
         L1.insertAtLast("C");
         L1.insertAtLast("D");
         L1.insertAtLast("E");
+        L1.insertAtLast("F");
+        L1.insertAtLast("G");
 
         LinkedList L2 = new LinkedList();
         L2.insertAtLast("B");
-        L2.insertAtLast("C");
         L2.insertAtLast("D");
+        L2.insertAtLast("G");
+        L2.insertAtLast("K");
 
 
         System.out.print("List L1 : "); L1.printList();
@@ -32,49 +35,50 @@ public class HRLinkedListMergeTwoSortedLists {
     }
 
 
-    public static Node mergeLists(Node head1, Node head2){
+        public static Node mergeLists(Node head1, Node head2){
 
-        Node curr1 = head1;
-        Node curr2 = head2;
-        Node dummy = new Node("");
-        Node tail = dummy;
+            Node curr1 = head1;
+            Node curr2 = head2;
+            Node dummy = new Node("");
+            Node tail = dummy;
 
-        while (true){
+            while (true){
 
-         if(curr1 != null){
-             tail.next = curr1;
-             break;
-         }
-         if(curr2 != null){
-             tail.next = curr2;
-             break;
-         }
+             if(curr1 == null){
+                 tail.next = curr2;
+                 break;
+             }
+             if(curr2 == null){
+                 tail.next = curr1;
+                 break;
+             }
 
-         int response = compare((curr1.data.charAt(0)),(curr2.data.charAt(0)));
+             int response = compare((curr1.data.charAt(0)),(curr2.data.charAt(0)));
 
-        // System.out.println("response : " + response);
+            // System.out.println("response : " + response);
 
-         if(response < 0){
-             tail.next = curr1;
-             curr1 = curr1.next;
-         }else if(response == 0){
-             tail.next = curr1;
+             if(response < 0){
+                 tail.next = curr1;
+                 curr1 = curr1.next;
+             }else if(response == 0){
+                 tail.next = curr2;
+                 curr2 = curr2.next;
+
+                 tail = tail.next;
+
+                 tail.next = curr1;
+                 curr1 = curr1.next;
+
+             }else {
+                 tail.next = curr2;
+                 curr2 = curr2.next;
+                }
+
              tail = tail.next;
-             tail.next = curr2;
-
-             curr1 = curr1.next;
-             curr2 = curr2.next;
-
-         }else {
-             tail.next = curr2;
-             curr2 = curr2.next;
             }
 
-         tail = tail.next;
+            return dummy.next;
         }
-
-        return dummy.next;
-    }
 
 
 
