@@ -8,7 +8,7 @@ public class PrintAllRootToLeafPath {
 
         TreeNode node2 = new TreeNode(50);
         node2.setRightChild(new TreeNode(30));
-        node2.setLeftCheild(new TreeNode(20));
+        node2.setLeftChild(new TreeNode(20));
 
     }
 
@@ -21,7 +21,7 @@ public class PrintAllRootToLeafPath {
         }
         st.push(root);
         rootToLeaf(root.getLeftCheild());
-        if(root.rightChild == null && root.leftCheild == null){
+        if(root.rightChild == null && root.leftChild == null){
             System.out.println();
         }
 

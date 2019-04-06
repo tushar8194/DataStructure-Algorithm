@@ -83,23 +83,22 @@ public class Tree {
         if(root == null){
             return 0;
         }
-        if(root.leftCheild == null && root.rightChild == null){
+        if(root.leftChild == null && root.rightChild == null){
             return 1;
         }
-        return getLeafNodeCount(root.leftCheild) + getLeafNodeCount(root.rightChild);
+        return getLeafNodeCount(root.leftChild) + getLeafNodeCount(root.rightChild);
      }
 
-<<<<<<< HEAD
 
 
     public  int getHalfLeafNodeCount(TreeNode root){
         if(root == null){
             return 0;
         }
-        if((root.leftCheild == null && root.rightChild != null)  || (root.leftCheild != null && root.rightChild == null )){
+        if((root.leftChild == null && root.rightChild != null)  || (root.leftChild != null && root.rightChild == null )){
             return 1;
         }
-        return (getLeafNodeCount(root.leftCheild) + getLeafNodeCount(root.rightChild));
+        return (getLeafNodeCount(root.leftChild) + getLeafNodeCount(root.rightChild));
     }
 
     public void levelOrderTraversal(Tree root){
@@ -118,10 +117,6 @@ public class Tree {
         }
         return false;
     }
-
-
-
-=======
->>>>>>> 0c46682e291ae8d98bdcd2b806b097c0fb070eb7
+    
 }
 

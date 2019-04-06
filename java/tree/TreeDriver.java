@@ -1,8 +1,6 @@
 package tree;
 
 public class TreeDriver {
-<<<<<<< HEAD
-
 
     public static void main(String[] args) {
 
@@ -10,8 +8,8 @@ public class TreeDriver {
 
         TreeNode node = new TreeNode(50);
         node.setRightChild(new TreeNode(30));
-        node.setLeftCheild(new TreeNode(20));
-       // node.leftCheild.setLeftCheild(new TreeNode(40));
+        node.setLeftChild(new TreeNode(20));
+        // node.leftChild.setleftChild(new TreeNode(40));
 
         System.out.println("Count of Nodes : " + t.countNodesInTree(node));
 
@@ -35,11 +33,11 @@ public class TreeDriver {
         // TODO Auto-generated method stub
         Tree tree = new Tree();
         tree.root = new TreeNode(1);
-        tree.root.leftCheild = new TreeNode(2);
+        tree.root.leftChild = new TreeNode(2);
         tree.root.rightChild = new TreeNode(3);
-        tree.root.rightChild.leftCheild = new TreeNode(30);
-        tree.root.rightChild.leftCheild.rightChild = new TreeNode(55);
-        tree.root.leftCheild.leftCheild = new TreeNode(4);
+        tree.root.rightChild.leftChild = new TreeNode(30);
+        tree.root.rightChild.leftChild.rightChild = new TreeNode(55);
+        tree.root.leftChild.leftChild = new TreeNode(4);
 
 
         System.out.println("\nHalf Leaf Node");
@@ -51,13 +49,13 @@ public class TreeDriver {
 
         TreeNode node2 = new TreeNode(50);
         node2.setRightChild(new TreeNode(30));
-        node2.setLeftCheild(new TreeNode(20));
+        node2.setLeftChild(new TreeNode(20));
 
-        System.out.println(t.isMirror(node,node2));
+        System.out.println(t.isMirror(node, node2));
 
 
-=======
-    public static void main(String[] args) {
+
+/*    public static void main(String[] args) {
         TreeNode node = new TreeNode(50);
         node.setRightChild(new TreeNode(30));
         node.setLeftChild(new TreeNode(20));
@@ -73,6 +71,7 @@ public class TreeDriver {
 
         System.out.println("\nPost-Order : ");
         Tree.postOrderTraversal(node);
->>>>>>> 0c46682e291ae8d98bdcd2b806b097c0fb070eb7
+
+    }*/
     }
 }
