@@ -1,7 +1,8 @@
+package graph;
 
 public class GraphTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {/*
 		// TODO Auto-generated method stub
 		
 		Graph gp=new Graph(4);
@@ -41,6 +42,6 @@ public class GraphTest {
 		gp.BFS();
 		System.out.println(gp.findPathExist('B'));
 
-	}
+	*/}
 
 }

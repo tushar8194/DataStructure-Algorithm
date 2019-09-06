@@ -1,9 +1,12 @@
+package graph;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
 public class Graph {
+/*
+
 	public final int MAX_INT= 20;
 	public Vertex vertxArr[];
 	public int[][] adjMatrix;
@@ -127,7 +130,7 @@ public class Graph {
 			}
 			return false;	
 	}
-		// rseting for next iterarion
-				
+		// rseting for next iterarion*/
+
 	}
 

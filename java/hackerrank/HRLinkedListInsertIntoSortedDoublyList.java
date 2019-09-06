@@ -21,9 +21,9 @@ public class HRLinkedListInsertIntoSortedDoublyList {
     public static DoublyNode sortedInsert(DoublyNode head, int data){
         DoublyNode curr = head;
 
-        while (){
+     /*   while (){
 
-        }
+        }*/
         return head;
     }
 
