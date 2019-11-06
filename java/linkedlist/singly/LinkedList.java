@@ -2,8 +2,8 @@ package linkedlist.singly;
 
 public class LinkedList {
 
-    Node head;
-    Node tail;
+    public Node head;
+    public Node tail;
 
     public LinkedList(){
         this.head= null;
