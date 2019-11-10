@@ -24,9 +24,9 @@ public class DeleteKthNodeFromLast {
 
     public static void deleteKthNode(Node head, int k){
         Node current = head;
-        int i= 0;
+        int i= 1;
 
-        while (current != null){
+        while (current.next != null){
             current = current.next;
             i++;
         }

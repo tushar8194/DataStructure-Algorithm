@@ -17,6 +17,7 @@ public class visaTest {
         list.addElementAtBegining("59");
         System.out.println("Head -> " + list.head.data);
 
+
         Node newHead = removeNodes(list.head,3);
         while(newHead != null){
             System.out.println(newHead.data);
