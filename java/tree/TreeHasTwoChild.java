@@ -11,11 +11,11 @@ public class TreeHasTwoChild {
         tree.root.leftChild.rightChild = new TreeNode(7);
         tree.root.leftChild.leftChild = new TreeNode(5);
         tree.root.rightChild.rightChild = new TreeNode(13);
-        //tree.root.rightChild.leftChild = new TreeNode(11);
+        tree.root.rightChild.leftChild = new TreeNode(11);
 
-        int result = haveTwoChild(tree.root);
+        boolean result = haveTwoChild(tree.root);
 
-        if(result != 0){
+        if(result == true){
             System.out.println("true");
         }else {
             System.out.println("false");
@@ -23,18 +23,18 @@ public class TreeHasTwoChild {
 
     }
 
-    public static int haveTwoChild(TreeNode root){
+    public static boolean haveTwoChild(TreeNode root){
         if(root == null){
-            return 1;
+            return true;
         }else if(root.leftChild == null && root.rightChild == null){
-            return 1;
+            return true;
         }else if(root.leftChild == null || root.rightChild == null){
-            return 0;
+            return false;
         }else {
-            int flag = 1;
+            boolean flag = true;
 
-            flag = flag * haveTwoChild(root.leftChild);
-            flag = flag * haveTwoChild(root.rightChild);
+            flag = flag && haveTwoChild(root.leftChild);
+            flag = flag && haveTwoChild(root.rightChild);
 
             return flag;
         }
