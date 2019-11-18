@@ -4,7 +4,7 @@ public class InsertAPersonWithMaxGap {
 
     public static void main(String[] args) {
 
-        String input = "0000000000100";
+        String input = "10000000000100";
         //0000000000100
         //010101010100
 

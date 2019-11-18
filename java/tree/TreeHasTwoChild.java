@@ -20,7 +20,6 @@ public class TreeHasTwoChild {
         }else {
             System.out.println("false");
         }
-
     }
 
     public static boolean haveTwoChild(TreeNode root){
