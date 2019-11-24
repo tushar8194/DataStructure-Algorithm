@@ -1,4 +1,4 @@
-package hackerrank.interview
+package interview
 
 
 import scala.util.Sorting.quickSort
@@ -6,6 +6,7 @@ object compareString {
 
 
   def main(args: Array[String]): Unit = {
+    print(compareStrings("hack","hacker","hackerrank"))
 
   }
 
