@@ -2,7 +2,7 @@ package interview
 
 
 import scala.util.Sorting.quickSort
-object compareString {
+object CompareString {
 
 
   def main(args: Array[String]): Unit = {
