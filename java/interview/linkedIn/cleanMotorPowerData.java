@@ -1,4 +1,4 @@
-package interview;
+package interview.linkedIn;
 
 public class cleanMotorPowerData {
 

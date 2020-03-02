@@ -1,4 +1,4 @@
-package interview;
+package interview.amex;
 
 public class getSizeOfListAmex {
 
