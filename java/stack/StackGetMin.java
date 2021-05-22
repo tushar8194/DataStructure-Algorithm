@@ -6,8 +6,8 @@ public class StackGetMin {
 
     /* Problem : Create own StackUsingArray which should returns minimum value element even after pop() operation (No duplicates) */
 
-    Stack<Integer> st = new Stack<>();
-    Stack<Integer> stMin = new Stack<>();
+    Stack<Integer> st = new Stack<Integer>();
+    Stack<Integer> stMin = new Stack<Integer>();
 
     // If inserting element is smaller then the min stack peek then insert in both Stacks.
     public void push(int data){

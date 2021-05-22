@@ -14,7 +14,7 @@ public class PrintAllRootToLeafPath {
 
     public static void rootToLeaf(TreeNode root){
 
-        Stack<TreeNode> st = new Stack<>();
+        Stack<TreeNode> st = new Stack<TreeNode>();
 
         if(root == null){
             return;

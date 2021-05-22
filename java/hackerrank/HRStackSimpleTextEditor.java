@@ -9,7 +9,7 @@ public class HRStackSimpleTextEditor {
 
     public static void main(String[] args) {
 
-        Stack<String> st = new Stack<>();
+        Stack<String> st = new Stack<String>();
         Scanner sc =new Scanner(System.in);
 
         int numcases = sc.nextInt();

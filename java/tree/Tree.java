@@ -35,7 +35,7 @@ public class Tree {
     }
 
     public  void inOrderTraversalWithoutRecur(TreeNode node) {
-        Stack<String> st=new Stack<>();
+        Stack<String> st=new Stack<String>();
 
     }
 

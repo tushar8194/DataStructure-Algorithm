@@ -1,0 +1,10 @@
+id,name,manager_id
+1001,StrictMan,Null
+505,JMan,1001
+501,BossMan,1001
+405,NoMan,505
+401,YesMan,501
+305,MiddleMan,401
+301,GoodMan,401
+105,WillMan,405
+101,WeakMan,405

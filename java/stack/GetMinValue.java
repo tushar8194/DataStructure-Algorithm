@@ -6,8 +6,8 @@ public class GetMinValue {
 
     static int[] arr = {1,2,4,-1,0,5};
 
-    static Stack<Integer> st = new Stack<>();
-    static Stack<Integer> minSt = new Stack<>();
+    static Stack<Integer> st = new Stack<Integer>();
+    static Stack<Integer> minSt = new Stack<Integer>();
 
 
     public static void main(String[] args) {

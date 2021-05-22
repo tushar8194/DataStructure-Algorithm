@@ -15,8 +15,8 @@ public class HRStackMaximumElement {
 
     public static void main(String[] args) {
 
-        Stack<Integer> st = new Stack<>();
-        Stack<Integer> stmax = new Stack<>();
+        Stack<Integer> st = new Stack<Integer>();
+        Stack<Integer> stmax = new Stack<Integer>();
 
 
         Scanner sc = new Scanner(System.in);

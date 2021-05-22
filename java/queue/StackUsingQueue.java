@@ -7,7 +7,7 @@ public class StackUsingQueue {
 
     /*Problem : Create a own StackUsingArray using QueueUsingArray ie. QueueUsingArray should follow LIFO */
 
-    Queue<Integer> queueObj = new LinkedList<>();
+    Queue<Integer> queueObj = new LinkedList<Integer>();
 
     public void push(int data){
         if(queueObj.isEmpty()){
